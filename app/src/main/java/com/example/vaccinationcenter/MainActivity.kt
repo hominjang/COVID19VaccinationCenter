@@ -11,7 +11,6 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import com.example.vaccinationcenter.databinding.ActivityMainBinding
-import com.example.vaccinationcenter.databinding.FragmentFirstBinding.inflate
 
 class MainActivity : AppCompatActivity() {
 
