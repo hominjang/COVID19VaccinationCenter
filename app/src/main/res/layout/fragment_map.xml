@@ -19,10 +19,12 @@
         <com.naver.maps.map.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></com.naver.maps.map.MapView>
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"></com.naver.maps.map.MapView>
 
         <Button
-            android:onClick="@{()->viewModel}"
+            android:onClick="@{()->viewModel.findMyLocation()}"
             android:layout_margin="10dp"
             android:text="내 위치로"
             app:layout_constraintRight_toRightOf="parent"

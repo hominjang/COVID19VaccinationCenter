@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/MapFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/MapFragment"
         android:name="com.example.vaccinationcenter.ui.MapFragment"
-        android:label="@string/map_fragment_label"
+        android:label="map_fragment_label"
         tools:layout="@layout/fragment_map"/>
 </navigation>

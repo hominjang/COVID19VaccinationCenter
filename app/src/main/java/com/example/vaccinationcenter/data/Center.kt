@@ -18,6 +18,8 @@ data class Center(
     @SerializedName("updatedAt")
     val updatedAt: String,
 
+    @SerializedName("centerType")
+    val centerType : String,
     @SerializedName("lat")
     val lat: String,
     @SerializedName("lng")

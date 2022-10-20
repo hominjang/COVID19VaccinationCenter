@@ -78,4 +78,8 @@ dependencies {
 
     // 22/10/19 통신확인용
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+
+    // 22/10/20 위치 받아오기 + 퍼미션
+    implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
 }

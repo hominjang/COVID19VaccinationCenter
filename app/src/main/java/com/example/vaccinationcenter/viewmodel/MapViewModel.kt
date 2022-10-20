@@ -18,14 +18,33 @@ class MapViewModel(private val repository: CenterRepository) : ViewModel() {
     val centerList: LiveData<List<Center>>
         get() = _centerList
 
+    private val _btnClick = MutableLiveData<Int>()
+    val btnClick: LiveData<Int>
+        get() = _btnClick
+
+    private var isPermissionGranted: Boolean = false
 
     fun viewModelStart() {
         viewModelScope.launch {
             repository.getAll().let {
                 _centerList.postValue(it)
-                Log.d("items", "sd" + it[0])
+                for (i in it) {
+                    if (i.centerType != "지역") {
+                        Log.d("items", "sd" + i.centerType)
+                    }
+                }
             }
         }
+    }
+
+    fun findMyLocation() {
+        if (isPermissionGranted) {
+            _btnClick.postValue(200)
+        }
+    }
+
+    fun permissionGranted() {
+        isPermissionGranted = true
     }
 
 }
