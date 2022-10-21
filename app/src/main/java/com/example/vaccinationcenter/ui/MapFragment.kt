@@ -134,7 +134,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                         currentLocation = location
 
                         naverMap.locationOverlay.run {
-                            isVisible = false
+                            isVisible = true
                             position =
                                 LatLng(currentLocation!!.latitude, currentLocation!!.longitude)
                         }
