@@ -15,11 +15,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.SplashActivity">
-
+        <TextView
+            android:id="@+id/topText"
+            android:textColor="#00CE3C"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/progress"
+            android:text="코로나19 예방접종센터 \n 조회서비스"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
         <ProgressBar
             android:id="@+id/progress"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topText"
+            app:layout_constraintBottom_toTopOf="@id/bottomText"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -44,6 +54,20 @@
             app:layout_constraintLeft_toLeftOf="@id/progress"
             app:layout_constraintRight_toRightOf="@id/progress"
             android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+        <TextView
+            android:text="지도 불러오는 중 ..."
+            android:textSize="25dp"
+            android:textColor="#dbead5"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/bottomText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></TextView>
 

@@ -30,7 +30,7 @@ class PointAdapter(context: Context, parent: ViewGroup, center: Center) :
         binding.itemsCenterName.text = center.centerName
         binding.itemsAddress.text = center.address
         binding.itemsPhoneNumber.text = center.phoneNumber
-        binding.itemsUpdatedAt.text = center.updatedAt
+        binding.itemsUpdatedAt.text = center.updatedAt + " 발표 / 제공 공공데이터활용지원센터"
 
         return binding.root
     }
