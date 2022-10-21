@@ -3,6 +3,7 @@ package com.example.vaccinationcenter.ui
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -93,6 +94,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                 marker.onClickListener = Overlay.OnClickListener() {
                     // 클릭 될 때
                     // 정보창 없으면, 정보창 열기
+
                     if (marker.infoWindow == null) {
                         // custom view를 위해 adapter를 통해 구현
                         infoWindow.adapter =
@@ -107,7 +109,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                     val cameraUpdate =
                         CameraUpdate.scrollTo(LatLng(i.lat.toDouble(), i.lng.toDouble()))
                     naverMap.moveCamera(cameraUpdate)
-                    false
+                    true
                 }
                 // 설정된 마커 찍기
                 marker.map = naverMap
@@ -157,6 +159,11 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         this.naverMap = naverMap
         // 지도 설정 끝나면, DB 가져와서 마커 찍을 준비
         mapViewModel.viewModelStart()
+        naverMap.setOnMapClickListener { pointF, latLng ->
+            infoWindow.close();
+
+        }
+
     }
 
     private fun requestPermissions() {
