@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/drawable/circle_progressbar.xml" value="0.1453125" />
+        <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/drawable/item_background.xml" value="0.1453125" />
         <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/activity_splash.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/fragment_first.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/fragment_map.xml" value="0.1296875" />
         <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/fragment_second.xml" value="0.1296875" />
-        <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/item_info.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/Homin/Documents/GitHub/COVID19VaccinationCenter/app/src/main/res/layout/item_info.xml" value="0.4" />
       </map>
     </option>
   </component>

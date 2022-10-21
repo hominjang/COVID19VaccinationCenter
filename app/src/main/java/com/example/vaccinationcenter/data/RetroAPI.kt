@@ -7,6 +7,7 @@ import java.net.URLDecoder
 interface RetroAPI {
 
     companion object {
+        // 인증키 입니다.
         private const val authKey = "bNmSjmL3NWL%2FmAmsQV0SyDT%2B8DCdZckhVg5%2FtSsmJHa47eBZBE%2BaFvCHYxeM1Dsz2FcgQ64elqYL3mr6GUyjOg%3D%3D"
     }
 

@@ -67,8 +67,8 @@ dependencies {
     kapt "androidx.room:room-compiler:2.4.3"
 
     // 22/10/18 hilt
-    implementation "com.google.dagger:hilt-android:2.28.1-alpha"
-    kapt "com.google.dagger:hilt-android-compiler:2.28.1-alpha"
+    implementation "com.google.dagger:hilt-android:2.43.2"
+    kapt "com.google.dagger:hilt-android-compiler:2.43.2"
 
     // 22/10/18 retrofit2
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

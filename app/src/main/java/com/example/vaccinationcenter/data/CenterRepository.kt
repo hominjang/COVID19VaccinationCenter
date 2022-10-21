@@ -1,14 +1,19 @@
 package com.example.vaccinationcenter.data
 
-import com.example.vaccinationcenter.MainApplication
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class CenterRepository (application: MainApplication){
 
-    private val databaseInstance = application.initApplication.centerDatabase.CenterDao()
-    private val retroInstance = application.initApplication.centerRetrofit
+// DatabaseModule / RetroitModule 에서 구현한 인스턴스들을 Hilt를 통해 넣어줍니다.
+@Singleton
+class CenterRepository @Inject constructor(
+    private val databaseInstance : CenterDao,
+    private val retroAPI: RetroAPI) {
 
+    // DB 쿼리 삽입/다 가져오기
     fun getAll() = databaseInstance.getAll()
     fun insert(centerList: List<Center>) = databaseInstance.insert(centerList)
 
-    suspend fun getCenterList(page : Int) = retroInstance.getCenterList(page)
+    // Retrofit 통신
+    suspend fun getCenterList(page: Int) = retroAPI.getCenterList(page)
 }

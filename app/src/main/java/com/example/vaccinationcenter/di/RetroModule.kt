@@ -1,29 +1,34 @@
-package com.example.vaccinationcenter.data
+package com.example.vaccinationcenter.di
 
 import android.content.Context
+import android.util.Log
 import androidx.room.Room
 import com.example.vaccinationcenter.BuildConfig
+import com.example.vaccinationcenter.data.AppDatabase
+import com.example.vaccinationcenter.data.CenterDao
+import com.example.vaccinationcenter.data.RetroAPI
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
+import javax.inject.Singleton
 
-class InitApplication(applicationContext: Context) {
+@InstallIn(SingletonComponent::class)
+@Module
+class RetroModule {
 
-    val centerDatabase = Room.databaseBuilder(
-        applicationContext,
-        AppDatabase::class.java,
-        "center.db"
-    ).allowMainThreadQueries()
-        .build()
-
-    val centerRetrofit: RetroAPI = initRetrofitBuilder().create(RetroAPI::class.java)
-
-    private fun initRetrofitBuilder(): Retrofit {
+    @Provides
+    @Singleton
+    fun provideRetrofit(@ApplicationContext appContext: Context): Retrofit {
+        // Retrofit 생성 및 반환
         val BASE_URL = "https://api.odcloud.kr/api/15077586/v1/"
 
-        // 로그용도
+        // 통신로그 용도
         val interceptor = HttpLoggingInterceptor()
         if (BuildConfig.DEBUG) {
             interceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -39,5 +44,11 @@ class InitApplication(applicationContext: Context) {
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    @Provides
+    fun provideRetroAPI(retrofit : Retrofit): RetroAPI {
+        // RetroAPI 반환
+        return retrofit.create(RetroAPI::class.java)
     }
 }

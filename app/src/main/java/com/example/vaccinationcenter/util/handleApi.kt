@@ -5,7 +5,7 @@ import com.google.gson.JsonSyntaxException
 import okio.IOException
 import org.json.JSONObject
 import retrofit2.Response
-
+// API 깔끔하게 사용하기위한 util
 suspend fun <T : Any> handleApi(
     call: suspend () -> Response<T>,
     errorMessage: String = "Some errors occurred, Please try again later"
@@ -35,7 +35,7 @@ suspend fun <T : Any> handleApi(
         if (e is IOException) {
 //            isConnectedToNetwork = false
         }
-        Log.d("items", "설마 여기냐?" + e.toString())
+        Log.d("items", " $e")
         return ApiError(RuntimeException(errorMessage))
     }
 }

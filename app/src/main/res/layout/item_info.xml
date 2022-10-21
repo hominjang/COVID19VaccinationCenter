@@ -16,6 +16,8 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#2DB400"
             android:id="@+id/items_centerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,6 +26,8 @@
             app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#2DB400"
             android:id="@+id/items_facilityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,6 +36,8 @@
             app:layout_constraintTop_toBottomOf="@+id/items_centerName"></TextView>
 
         <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#2DB400"
             android:id="@+id/items_phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,6 +46,8 @@
             app:layout_constraintTop_toBottomOf="@+id/items_facilityName"></TextView>
 
         <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#2DB400"
             android:id="@+id/items_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,6 +56,8 @@
             app:layout_constraintTop_toBottomOf="@+id/items_phoneNumber"></TextView>
 
         <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#2DB400"
             android:id="@+id/items_updatedAt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
