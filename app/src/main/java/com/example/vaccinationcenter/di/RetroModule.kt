@@ -26,7 +26,7 @@ class RetroModule {
     @Singleton
     fun provideRetrofit(@ApplicationContext appContext: Context): Retrofit {
         // Retrofit 생성 및 반환
-        val BASE_URL = "api encode 주소"
+        val BASE_URL = "https://api.odcloud.kr/api/15077586/v1/"
 
         // 통신로그 용도
         val interceptor = HttpLoggingInterceptor()
